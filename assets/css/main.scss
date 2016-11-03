@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=Shrikhand');
+@import "bourbon/bourbon.scss";
+#menu{
+  position: absolute;
+  top: 0;
+  left: 30px;
+  cursor: pointer;
+}
+.container{
+  display: flex;
+  .content{
+    flex-shrink: 5;
+    position: relative;
+  }
+  .nav{
+    @include transition(display 900ms);
+
+    text-align: center;
+    width: 240px;
+    position: relative;
+    bottom: 0;
+    top: 0;
+    background: #424242;
+    display: none;
+    .float{
+    position: fixed;
+    left: 30px;
+    text-align: end;
+    #menu-sb{
+      //display: none;
+      cursor: pointer;
+      color: #ef212f;
+      font-size: 30pt;
+    }
+    img{
+      width: 100px;
+      position: relative;
+      top: 20px;
+    }
+    ul{
+      padding: 0;
+    }
+    ul li a{
+      color: white;
+      position: relative;
+      top: 20px;
+      text-decoration: none;
+      font-size: 15pt;
+      line-height: 30px;
+    }
+  }}
+}
+body{
+  margin: 0;
+}
+header {
+  text-align: center;
+h1{
+  font-family: 'Shrikhand', cursive;
+  font-weight: lighter;
+  font-size: 30pt;
+  }
+  ul.share-buttons{
+    list-style: none;
+    padding: 0;
+  }
+
+  ul.share-buttons li{
+    display: inline;
+  }
+
+  ul.share-buttons .sr-only {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+  }
+
+
+}
+section.intro{
+  background-color: black;
+  text-align: center;
+  padding: 30px;
+
+  h1{
+    color: white;
+  }
+  nav a {
+    color: white;
+    font-size: 17pt;
+    border: 2px solid white;
+    padding: 8px;
+    text-decoration: none;
+    background-color: black;
+    border-radius: 9px;
+    &:hover{
+      color:black;
+      background-color: white;
+
+    }
+  }
+}
+section.types{
+  padding: 30px;
+  background: #0998e6;
+  h1{
+    color: white;
+    padding: 20px;
+  }
+}
+section.sizes{
+  text-align: center;
+  background-color: #f60060;
+  padding: 30px;
+  h1{
+    margin-top: 0;
+    color: white;
+    padding: 20px;
+  }
+  .horizontal-triple-large,.horizontal-triple-small,.horizontal-triple-medium{
+    margin: 20px;
+    display: inline-block;
+  }
+}
+footer{
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  color: white;
+  background-color: black;
+  vertical-align: middle;
+  h2 a{
+    margin: 0px;
+    padding: 15px;
+    font-size: 10pt;
+    color: white;
+    text-decoration: none;
+  }
+}
+@media screen and (max-width:884px) {
+
+  .container .nav{
+    position: fixed;
+    z-index: 10;
+    #menu-sb{
+      display: block;
+    }
+  }
+}
+@media screen and (min-width:884px) {
+
+  .container .nav{
+
+    #menu-sb{
+      display: none;
+    }
+  }
+}

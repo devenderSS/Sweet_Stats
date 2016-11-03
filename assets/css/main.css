@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css?family=Shrikhand");
+#menu {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  cursor: pointer; }
+
+.container {
+  display: flex; }
+  .container .content {
+    flex-shrink: 5;
+    position: relative; }
+  .container .nav {
+    -webkit-transition: display 900ms;
+    -moz-transition: display 900ms;
+    transition: display 900ms;
+    text-align: center;
+    width: 240px;
+    position: relative;
+    bottom: 0;
+    top: 0;
+    background: #424242;
+    display: none; }
+    .container .nav .float {
+      position: fixed;
+      left: 30px;
+      text-align: end; }
+      .container .nav .float #menu-sb {
+        cursor: pointer;
+        color: #ef212f;
+        font-size: 30pt; }
+      .container .nav .float img {
+        width: 100px;
+        position: relative;
+        top: 20px; }
+      .container .nav .float ul {
+        padding: 0; }
+      .container .nav .float ul li a {
+        color: white;
+        position: relative;
+        top: 20px;
+        text-decoration: none;
+        font-size: 15pt;
+        line-height: 30px; }
+
+body {
+  margin: 0; }
+
+header {
+  text-align: center; }
+  header h1 {
+    font-family: 'Shrikhand', cursive;
+    font-weight: lighter;
+    font-size: 30pt; }
+  header ul.share-buttons {
+    list-style: none;
+    padding: 0; }
+  header ul.share-buttons li {
+    display: inline; }
+  header ul.share-buttons .sr-only {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden; }
+
+section.intro {
+  background-color: black;
+  text-align: center;
+  padding: 30px; }
+  section.intro h1 {
+    color: white; }
+  section.intro nav a {
+    color: white;
+    font-size: 17pt;
+    border: 2px solid white;
+    padding: 8px;
+    text-decoration: none;
+    background-color: black;
+    border-radius: 9px; }
+    section.intro nav a:hover {
+      color: black;
+      background-color: white; }
+
+section.types {
+  padding: 30px;
+  background: #0998e6; }
+  section.types h1 {
+    color: white;
+    padding: 20px; }
+
+section.sizes {
+  text-align: center;
+  background-color: #f60060;
+  padding: 30px; }
+  section.sizes h1 {
+    margin-top: 0;
+    color: white;
+    padding: 20px; }
+  section.sizes .horizontal-triple-large, section.sizes .horizontal-triple-small, section.sizes .horizontal-triple-medium {
+    margin: 20px;
+    display: inline-block; }
+
+footer {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  color: white;
+  background-color: black;
+  vertical-align: middle; }
+  footer h2 a {
+    margin: 0px;
+    padding: 15px;
+    font-size: 10pt;
+    color: white;
+    text-decoration: none; }
+
+@media screen and (max-width: 884px) {
+  .container .nav {
+    position: fixed;
+    z-index: 10; }
+    .container .nav #menu-sb {
+      display: block; } }
+@media screen and (min-width: 884px) {
+  .container .nav #menu-sb {
+    display: none; } }
+
+/*# sourceMappingURL=main.css.map */
