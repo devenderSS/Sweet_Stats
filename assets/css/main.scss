@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Shrikhand');
-@import "bourbon/bourbon.scss";
+@import "bourbon/_bourbon.scss";
+*{
+  @include transition(all 300ms);
+}
 #menu{
   position: absolute;
   top: 0;
@@ -14,9 +17,9 @@
   }
   .nav{
     @include transition(display 900ms);
-
+    transition: all 350ms ease-in-out;
     text-align: center;
-    width: 240px;
+    width: 0px;
     position: relative;
     bottom: 0;
     top: 0;
@@ -26,16 +29,18 @@
     position: fixed;
     left: 30px;
     text-align: end;
+
     #menu-sb{
       //display: none;
       cursor: pointer;
       color: #ef212f;
       font-size: 30pt;
     }
-    img{
-      width: 100px;
+    img.logo{
+      width: 0px;
       position: relative;
       top: 20px;
+      //display: none;
     }
     ul{
       padding: 0;
@@ -147,6 +152,7 @@ footer{
   .container .nav{
     position: fixed;
     z-index: 10;
+
     #menu-sb{
       display: block;
     }
